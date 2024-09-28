@@ -1,0 +1,33 @@
+const prisma = require('../prismaClient');
+
+const getAllContacts = async (req, res) => {
+    try {
+        const messages = await prisma.contactMessage.findMany();
+        res.status(200).json(messages);
+    } catch (error) {
+        console.error('Erro ao buscar mensagens:', error);
+        res.status(500).json({ error: 'Erro ao buscar os Mensagens' });
+    }
+};
+
+
+const sendContactMessage = async (req, res) => {
+    const { name, email, message } = req.body;
+
+    try {
+        const newMessage = await prisma.contactMessage.create({
+            data: {
+                name,
+                email,
+                message,
+            },
+        });
+
+        res.status(201).json({ message: 'Mensagem enviada com sucesso!' });
+    } catch (error) {
+        console.error("Erro ao enviar mensagem de contato:", error);
+        res.status(500).json({ error: 'Erro ao enviar mensagem de contato.' });
+    }
+};
+
+module.exports = { sendContactMessage, getAllContacts };
