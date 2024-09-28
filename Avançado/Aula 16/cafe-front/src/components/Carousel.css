@@ -1,0 +1,38 @@
+/* src/components/Carousel.css */
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 1; /* Certifica que o texto do carrossel fique sobre a imagem */
+}
+
+.carousel-caption h3 {
+    font-size: 1.5rem;
+    font-family: 'Georgia', serif;
+}
+
+.carousel-caption p {
+    font-size: 1rem;
+    font-family: 'Georgia', serif;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: auto; /* Ajusta a altura da imagem no mobile */
+        max-height: 300px; /* Limita a altura da imagem */
+    }
+
+    .carousel-caption h3 {
+        font-size: 1.2rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+}

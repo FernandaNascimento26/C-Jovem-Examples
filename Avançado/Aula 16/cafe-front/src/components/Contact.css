@@ -1,0 +1,82 @@
+/* src/components/Contact.css */
+.contact-section {
+    padding: 50px 20px;
+    background-color: #f4ebe2; /* Cor de fundo suave para combinar com o tema */
+    color: #4a2c2a;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-section h1 {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #8b5e3c;
+}
+
+.contact-section p {
+    font-family: 'Georgia', serif;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.contact-info {
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-info strong {
+    color: #8b5e3c;
+    font-weight: bold;
+}
+
+.contact-form {
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #4a2c2a;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    font-family: 'Georgia', serif;
+}
+
+button[type="submit"] {
+    background-color: #8b5e3c;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: #704d34;
+}

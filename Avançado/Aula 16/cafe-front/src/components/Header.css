@@ -1,0 +1,30 @@
+.navbar {
+    background-color: #8b5e3c; /* Cor de fundo personalizada */
+}
+
+.navbar-brand {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 2rem;
+    color: #3e2723 !important; /* Cor personalizada para o título */
+}
+
+.navbar-nav .nav-link {
+    color: #3e2723 !important; /* Cor chocolate para os links do menu */
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #3e2723; /* Cor chocolate no hover */
+    color: #fff !important; /* Cor branca no hover */
+    border-radius: 5px;
+}
+
+.navbar-toggler {
+    border: none; /* Remove a borda do botão */
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="%233e2723" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" d="M4 8h24M4 16h24M4 24h24"/%3E%3C/svg%3E');
+}
