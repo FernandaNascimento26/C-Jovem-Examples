@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Completo de Tabela HTML</title>
+</head>
+<body>
+
+<h2>Tabela de Vendas</h2>
+
+<table border="1">
+    <!-- Cabeçalho da tabela -->
+    <thead>
+        <tr>
+            <th rowspan="2">Produto</th>
+            <!-- rowspan usado para mesclar linhas no cabeçalho -->
+            <th colspan="2">Vendas</th>
+            <!-- colspan usado para mesclar colunas no cabeçalho -->
+        </tr>
+        <tr>
+            <th>Janeiro</th>
+            <th>Fevereiro</th>
+        </tr>
+    </thead>
+    
+    <!-- Corpo da tabela -->
+    <tbody>
+        <tr>
+            <td>Produto 1</td>
+            <td>50</td>
+            <td>60</td>
+        </tr>
+        <tr>
+            <td>Produto 2</td>
+            <td>30</td>
+            <td>40</td>
+        </tr>
+        <tr>
+            <td>Produto 3</td>
+            <td colspan="2">Sem dados disponíveis</td>
+            <!-- colspan usado para mesclar as duas colunas de "vendas" -->
+        </tr>
+    </tbody>
+
+    <!-- Rodapé da tabela -->
+    <tfoot>
+        <tr>
+            <td>Total</td>
+            <td>80</td>
+            <td>100</td>
+        </tr>
+    </tfoot>
+</table>
+
+</body>
+</html>
