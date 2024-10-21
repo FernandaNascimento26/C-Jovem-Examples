@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Completa sem HTML Semântico</title>
+</head>
+<body>
+
+    <!-- Cabeçalho da página -->
+    <div id="header">
+        <h1>Jornal Diário</h1>
+        <p>As principais notícias de hoje</p>
+        <!-- Navegação principal -->
+        <div id="nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#politica">Política</a></li>
+                <li><a href="#tecnologia">Tecnologia</a></li>
+                <li><a href="#esportes">Esportes</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Conteúdo principal -->
+    <div id="main-content">
+        <!-- Seção de Política -->
+        <div class="section" id="politica">
+            <h2>Política</h2>
+            <!-- Primeiro artigo -->
+            <div class="article">
+                <h3>Reforma Política Ganha Força no Congresso</h3>
+                <img src="https://via.placeholder.com/400x200" alt="Imagem da Reforma Política">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sit amet fermentum nunc. Aliquam erat volutpat.</p>
+                <p>Proin feugiat, mauris ut vehicula malesuada, urna felis cursus justo, id dapibus quam lorem id augue.</p>
+            </div>
+
+            <!-- Segundo artigo -->
+            <div class="article">
+                <h3>Debate Presidencial Aquece Cenário Político</h3>
+                <img src="https://via.placeholder.com/400x200" alt="Debate Presidencial">
+                <p>Donec malesuada magna nec risus blandit, et tempor nisl aliquam. Sed tristique faucibus nisi, id vehicula magna facilisis vel.</p>
+                <p>Cras interdum, arcu et volutpat venenatis, odio velit accumsan urna, vitae suscipit nisi lacus ac dui.</p>
+            </div>
+        </div>
+
+        <!-- Seção de Tecnologia -->
+        <div class="section" id="tecnologia">
+            <h2>Tecnologia</h2>
+            <!-- Primeiro artigo -->
+            <div class="article">
+                <h3>Novas Tendências no Mercado de Tecnologia</h3>
+                <img src="https://via.placeholder.com/400x200" alt="Tendências de Tecnologia">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent bibendum, elit ac ultricies fermentum, erat erat dapibus augue, vitae ullamcorper velit risus a libero.</p>
+                <p>Sed vel ante nec elit hendrerit scelerisque. Vivamus vitae interdum justo, id fermentum purus.</p>
+            </div>
+
+            <!-- Segundo artigo -->
+            <div class="article">
+                <h3>Inovações em Inteligência Artificial</h3>
+                <img src="https://via.placeholder.com/400x200" alt="Inteligência Artificial">
+                <p>Morbi sed nulla nisi. Sed eget sapien vitae sem luctus tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+                <p>Integer vestibulum ex nec lectus consequat, ac tincidunt nisi dignissim.</p>
+            </div>
+        </div>
+
+        <!-- Seção de Esportes -->
+        <div class="section" id="esportes">
+            <h2>Esportes</h2>
+            <!-- Primeiro artigo -->
+            <div class="article">
+                <h3>Final do Campeonato Nacional de Futebol</h3>
+                <img src="https://via.placeholder.com/400x200" alt="Final do Campeonato">
+                <p>Aenean consectetur orci eget mauris vestibulum, sed gravida justo vestibulum. Nullam consectetur leo eu ligula bibendum fermentum.</p>
+                <p>Vestibulum finibus leo sed magna ultrices, vitae elementum lacus commodo.</p>
+            </div>
+
+            <!-- Segundo artigo -->
+            <div class="article">
+                <h3>Olimpíadas de 2024: Expectativas e Preparativos</h3>
+                <img src="https://via.placeholder.com/400x200" alt="Olimpíadas 2024">
+                <p>Suspendisse potenti. Integer dignissim vestibulum arcu at laoreet. Proin fermentum velit quam, non lobortis mi vulputate nec.</p>
+                <p>Nullam a tincidunt elit, at tempus odio. Nulla malesuada ante sed eros pretium, sit amet convallis purus.</p>
+            </div>
+        </div>
+
+        <!-- Seção de Mais Tags Semânticas -->
+        <div class="section" id="mais-tags">
+            <h2>Mais Tags Semânticas do HTML5</h2>
+
+            <!-- Exemplo de <figure> e <figcaption> -->
+            <div class="figure">
+                <img src="https://via.placeholder.com/300" alt="Exemplo de Figura">
+                <p>Figura 1: Exemplo de uso da tag <code>&lt;figure&gt;</code> com legenda.</p>
+            </div>
+
+            <!-- Exemplo de <mark> -->
+            <p>O trecho a seguir contém um texto <span class="highlight">importante</span> que precisa ser destacado.</p>
+
+            <!-- Exemplo de <time> -->
+            <p>O evento está agendado para <span>25 de dezembro de 2024</span>.</p>
+
+            <!-- Exemplo de <details> e <summary> -->
+            <div class="details">
+                <span class="summary">Clique aqui para mais informações</span>
+                <p>Essas são as informações adicionais que estavam ocultas.</p>
+            </div>
+
+            <!-- Exemplo de <progress> -->
+            <label for="progresso">Progresso da tarefa:</label>
+            <span id="progresso">70%</span>
+
+            <!-- Exemplo de <output> -->
+            <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+                <label for="a">Valor 1:</label>
+                <input type="number" id="a" value="10"> +
+                <label for="b">Valor 2:</label>
+                <input type="number" id="b" value="20">
+                = <input type="text" name="x" value="30">
+            </form>
+        </div>
+    </div>
+
+    <!-- Informações adicionais e contato -->
+    <div id="aside">
+        <h3>Sobre o Jornal</h3>
+        <p>O Jornal Diário traz as notícias mais recentes em várias áreas. Fundado em 2000, somos uma referência no jornalismo digital.</p>
+
+        <h3>Contato</h3>
+        <p>Envie suas sugestões e feedback para <a href="mailto:contato@jornaldiario.com">contato@jornaldiario.com</a>.</p>
+    </div>
+
+    <!-- Rodapé da página -->
+    <div id="footer">
+        <p>&copy; 2024 Jornal Diário. Todos os direitos reservados.</p>
+        <p><a href="#politica">Política de Privacidade</a> | <a href="#termos">Termos de Uso</a></p>
+    </div>
+
+</body>
+</html>
