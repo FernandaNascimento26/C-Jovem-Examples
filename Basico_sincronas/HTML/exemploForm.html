@@ -13,6 +13,7 @@
     <!-- Campo de texto -->
     <label for="nome">Nome:</label>
     <input type="text" id="nome" name="nome" required>
+    <textarea name="descricao" maxlength="200" placeholder="descreva.."></textarea>"
     <br><br>
 
     <!-- Campo de e-mail -->
@@ -25,6 +26,33 @@
     <input type="password" id="senha" name="senha" required>
     <br><br>
 
+    <input type="number" name="idade"> <br>
+    <input type="date" name="dt_nascimento"> <br>
+    <input type="time" name="tempo"> <br>
+    <input type="color" name=""> <br>
+    <input type="range" name=""  min="1" max="50"> <br>
+    <input type="checkbox" name=""> <br>
+    <label>Feminino</label><input type="radio" name="genero" value="feminino"> <br>
+    <label>Masculino</label><input type="radio" name="genero" value="masculino"> <br>
+    <input type="file"> <br>
+    <input type="hidden" name="token" value="abc123"><br>
+    <input type="tel" id="telefone" name="telefone"><br>
+    <input type="checkbox" id="musica" name="interesses" value="musica">
+    <label for="musica">Música</label><br>
+
+    <input type="checkbox" id="esportes" name="interesses" value="esportes">
+    <label for="esportes">Esportes</label><br>
+
+    <input type="checkbox" id="tecnologia" name="interesses" value="tecnologia">
+    <label for="tecnologia">Tecnologia</label><br>
+    <input type="url">
+
+    <select id="pais" name="pais">
+        <option value="brasil">Brasil</option>
+        <option value="eua">Estados Unidos</option>
+        <option value="portugal">Portugal</option>
+        <option value="canada" selected>Canadá</option>
+    </select>
     <!-- Botão de envio -->
     <button type="submit">Cadastrar</button>
 </form>
