@@ -26,17 +26,23 @@
     <input type="password" id="senha" name="senha" required>
     <br><br>
 
-    <input type="number" name="idade"> <br>
-    <input type="date" name="dt_nascimento"> <br>
-    <input type="time" name="tempo"> <br>
+    <!-- Campo numérico -->
+    <input type="number" name="idade"> <br><br>
+
+    <!-- Campo de data -->
+    <input type="date" name="dt_nascimento"> <br><br>
+
+    <!-- Campo de hora -->
+    <input type="time" name="tempo"> <br><br>
+
+    <!-- Campo de cores --> <br><br>
     <input type="color" name=""> <br>
-    <input type="range" name=""  min="1" max="50"> <br>
-    <input type="checkbox" name=""> <br>
-    <label>Feminino</label><input type="radio" name="genero" value="feminino"> <br>
-    <label>Masculino</label><input type="radio" name="genero" value="masculino"> <br>
-    <input type="file"> <br>
-    <input type="hidden" name="token" value="abc123"><br>
-    <input type="tel" id="telefone" name="telefone"><br>
+
+    <!-- Campo de intervalo de valores -->
+    <input type="range" name=""  min="1" max="50"> <br><br>
+
+    <!-- Campo checkbox -->
+    <label>Check</label><br>
     <input type="checkbox" id="musica" name="interesses" value="musica">
     <label for="musica">Música</label><br>
 
@@ -45,14 +51,36 @@
 
     <input type="checkbox" id="tecnologia" name="interesses" value="tecnologia">
     <label for="tecnologia">Tecnologia</label><br>
-    <input type="url">
 
+    <!-- Campo radio -->
+    <label>Radio</label> <br>
+    <label>Feminino</label><input type="radio" name="genero" value="feminino"> <br>
+    <label>Masculino</label><input type="radio" name="genero" value="masculino"> <br>
+   
+    <!-- Campo de arquivo --><br><br>
+    <label>Aquivo</label>
+    <input type="file"> <br>
+
+    <!-- Campo hidden - esconder --> <br><br>
+    <input type="hidden" name="token" value="abc123"><br><br>
+    
+    <!-- Campo de telefone --> <br><br>
+    <label>Telefone</label>
+    <input type="tel" id="telefone" name="telefone"><br><br>
+
+    <!-- Campo de url -->
+    <label>Url: </label>
+    <input type="url"> <br><br>
+
+    <!-- Campo select -->
+    <label>Select</label>
     <select id="pais" name="pais">
         <option value="brasil">Brasil</option>
         <option value="eua">Estados Unidos</option>
         <option value="portugal">Portugal</option>
         <option value="canada" selected>Canadá</option>
     </select>
+    <br><br>
     <!-- Botão de envio -->
     <button type="submit">Cadastrar</button>
 </form>
