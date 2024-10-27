@@ -1,0 +1,141 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f3f3f3;
+    color: #333;
+  }
+  
+  /* Estilo para o título principal */
+  h1 {
+    color: #34495e;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2em;
+  }
+  
+  /* Estilo para seções de cada seletor */
+  section {
+    background-color: #ffffff;
+    border: 2px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    color: #3498db;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+  }
+  
+  /* Estilos para as explicações visuais */
+  p {
+    margin: 10px 0;
+  }
+  
+  /* Estilo de ênfase para os textos explicativos */
+  p.example {
+    background-color: #e6f7ff;
+    padding: 15px;
+    border-left: 4px solid #3498db;
+    font-weight: bold;
+  }
+  
+  /* Estilos específicos dos exemplos de seletores */
+  
+  /* Seletor de Tipo (p) - Estilo para paragrafos no geral */
+  p.example {
+    color: #1abc9c;
+  }
+  
+  /* Seletor de Classe - container */
+  .container {
+    background-color: #d1f0e2;
+    padding: 15px;
+    border-radius: 5px;
+    border: 2px dashed #1abc9c;
+    font-style: italic;
+  }
+  
+  /* Seletor de ID - especial */
+  #especial {
+    color: #e74c3c;
+    font-weight: bold;
+    background-color: #f9e6e6;
+    padding: 10px;
+    border: 2px solid #e74c3c;
+    border-radius: 5px;
+  }
+  
+  /* Seletor Descendente - para parágrafo dentro de .descendente */
+  .descendente p {
+    color: #2ecc71;
+    font-style: italic;
+    background-color: #e0ffe5;
+    padding: 10px;
+    border-left: 5px solid #2ecc71;
+  }
+  
+  /* Seletor Filho - para <li> filho direto de <ul> */
+  ul > li {
+    list-style-type: square;
+    color: #9b59b6;
+    padding: 8px;
+    background-color: #f4e1fa;
+    border-radius: 3px;
+  }
+  
+  /* Seletor Adjacente - primeiro parágrafo após <h2> */
+  h2 + p {
+    color: #d35400;
+    font-weight: bold;
+    background-color: #ffe5cc;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Seletor Irmão Geral - todos os <p> irmãos de <h2> */
+  h2 ~ p {
+    color: #7f8c8d;
+    background-color: #e9ebec;
+    padding: 8px;
+    border-radius: 4px;
+  }
+  
+  /* Seletor de Atributo - para <input type="text"> */
+  input[type="text"] {
+    border: 2px solid #333;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+  }
+  
+  /* Pseudo-classe :hover - muda cor do botão ao passar o cursor */
+  button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #1d6fa5;
+  }
+  
+  /* Pseudo-elemento ::before - adiciona ícone antes dos parágrafos */
+  p::before {
+    content: "👉 ";
+    color: #3498db;
+    font-weight: bold;
+  }
+  
