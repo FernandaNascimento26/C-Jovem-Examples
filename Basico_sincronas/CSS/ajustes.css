@@ -64,7 +64,7 @@ body {
   /* Static (Padrão) */
   .position-static {
     background-color: #f9f9f9;
-    padding: 10px;
+    padding: 0px;
     border: 1px solid #333;
   }
   
@@ -72,7 +72,8 @@ body {
   .position-relative {
     position: relative;
     top: 10px;
-    left: 10px;
+    left: 450px;
+    width: 300px;
     background-color: #e3f2fd;
     padding: 10px;
     border: 1px solid #333;
@@ -88,8 +89,8 @@ body {
   
   .position-absolute {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 70px;
+    left: 500px;
     background-color: #ffebee;
     padding: 10px;
     border: 1px solid #333;
@@ -109,7 +110,7 @@ body {
   /* Sticky */
   .position-sticky {
     position: sticky;
-    top: 0;
+    bottom: 0;
     background-color: #fff9c4;
     padding: 10px;
     border: 1px solid #333;
@@ -128,6 +129,8 @@ body {
     .media-query-box {
       background-color: #ffcdd2;
       color: #333;
+      width: 50%;
+      height: 50%;
     }
   }
   
@@ -161,6 +164,17 @@ body {
     background-color: #f06292;
     padding: 20px;
     text-align: center;
+  }
+
+  @media (max-width: 600px) {
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 10px;
+      padding: 10px;
+      background-color: #fce4ec;
+      border: 1px solid #333;
+    }
   }
   
   /* Footer */
