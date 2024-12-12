@@ -16,7 +16,7 @@ const: Escopo de bloco, hoisting, não reatribuível.
 */
 
 /*video 2
-let nome = "Ana"; // String
+let nome = "Ana"; // String    
 let idade = 30; // Número
 let estaAprovado = true; // Booleano
 let sobrenome = null; // Nulo
@@ -38,18 +38,18 @@ y--;
 3*/
 
 /* Comparação
-console.log(10 == "10"); 
-console.log(10 === "10"); 
+console.log(10 == "10"); true
+console.log(10 === "10"); false
 console.log(100 > 10); 
 console.log(100 < 10);
-console.log(10 != 5); 
-console.log(10 !== "10"); */
+console.log(10 != "10"); false
+console.log(10 !== "10"); true */
 
 /*Lógicos
 let a = true;
 let b = false;
-console.log(a && b); 
-console.log(a || b); 
+console.log(a && b); false
+console.log(a || b); true
 console.log(!a); */
 
 /*
@@ -63,6 +63,7 @@ let idade = 20;
 if (idade < 18) {
     console.log("Menor de idade");
 } 
+
 
 //if else
 if (idade < 18) {
@@ -84,7 +85,7 @@ else if (idade < 65) {
     console.log("Adulto");
 } 
 else {
-    console.log("Adulto");
+    console.log("véi");
 }
 
 
@@ -102,7 +103,7 @@ while (j < 5) {
 }
 
 // do while loop
-let k = 0;
+let k = 7;
 do {
     console.log(k);
     k++;

@@ -4,4 +4,4 @@ setTimeout(function() {
   elemento.style.color = 'red';
   elemento.style.backgroundColor = 'yellow';
   elemento.style.width = '400px';
-}, 1000);
+}, 3000);
