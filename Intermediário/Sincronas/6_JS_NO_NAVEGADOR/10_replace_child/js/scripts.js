@@ -1,5 +1,5 @@
-let novoElemento = document.createElement("p");
-let texto = document.createTextNode("Algum texto");
+let novoElemento = document.createElement("h2");
+let texto = document.createTextNode("Carlos Jeferson");
 
 novoElemento.appendChild(texto);
 

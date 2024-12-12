@@ -1,6 +1,6 @@
 let lista = document.createElement('ul');
 
-for(i = 0; i < 5; i++) {
+for(i = 1; i < 6; i++) {
 
   let item = document.createElement('li');
 
