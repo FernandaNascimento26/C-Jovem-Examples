@@ -1,31 +1,41 @@
 //vídeo 1
 //Funções
 function calcularArea(largura, altura) {
+    console.log("Largura: ", largura);
+    console.log("Altura: ", altura);
+
     return largura * altura;
 }
-console.log(calcularArea(5, 3)); // 15
 
-//Eventos
-<button onclick="mostrarMensagem()">Enviar</button>
+let a = parseInt(prompt("Digite um valor"));
+let b = parseInt(prompt("Digite um outro valor"));
 
-function mostrarMensagem() {
-    alert("Dados enviados com sucesso!");
-}
+console.log(calcularArea(a, b)); 
+
+
+<button onclick="alert('Você clicou!')">Clique aqui</button>
 
 //Objetos e métodos
 let carro = {
     marca: "Toyota",
     modelo: "Corolla",
     ano: 2020,
+    acessorios: ["automático", "câmera de ré", "teto solar"],
     descricao: function() {
         return `Carro: ${this.marca} ${this.modelo}, Ano: ${this.ano}`;
     }
 };
+
+carro.cor = "Branco"
 console.log(carro.descricao());
+console.log(carro.cor);
+
+
+let variavel = 50;
+let listaCompras = [70, "azul", false];
 
 //vídeo 2
 //Arrays
-
 
 //iteração
 for (let i = 0; i < listaCompras.length; i++) {
@@ -54,6 +64,7 @@ console.log(dobro(4)); // 8
 
 //Arrow Function
 const dobro = n => n * 2;
+
 console.log(dobro(4)); // 8
 
 
@@ -65,6 +76,9 @@ console.log(dobrados);
 //Template Literals
 let nome = "Ana";
 let mensagem = `Bem-vinda, ${nome}! Estamos felizes em tê-la aqui.`;
+
+let mensagem2 = 'Bem-vinda'+ nome + '! Estamos felizes em tê-la aqui.';
+
 console.log(mensagem);
 
 
