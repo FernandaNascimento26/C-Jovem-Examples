@@ -1,0 +1,63 @@
+[
+    {
+      "id": 1,
+      "name": "Produto A",
+      "price": 50,
+      "image": "../assets/imagem1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Produto B",
+      "price": 100,
+      "image": "/assets/imagem1.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Produto C",
+      "price": 75,
+      "image": "/assets/imagem1.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Produto D",
+      "price": 120,
+      "image": "/assets/imagem1.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Produto E",
+      "price": 200,
+      "image": "/assets/imagem1.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Produto E",
+      "price": 200,
+      "image": "/assets/imagem1.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Produto E",
+      "price": 200,
+      "image": "/assets/imagem1.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Produto E",
+      "price": 200,
+      "image": "/assets/imagem1.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Produto E",
+      "price": 200,
+      "image": "/assets/imagem1.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Produto E",
+      "price": 200,
+      "image": "/assets/imagem1.jpg"
+    }
+  ]
+  
