@@ -116,11 +116,11 @@ A `Home` precisa rolar automaticamente até a seção correta ao carregar.
 ```jsx
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import HeroSection from "../components/HeroSection";
-import AboutSection from "../components/AboutSection";
-import FeaturesSection from "../components/FeaturesSection";
-import StateSection from "../components/StateSection";
-import ContactSection from "../components/ContactSection";
+import Secao1 from "../components/Secao1";
+import Secao2 from "../components/Secao2";
+import Secao3 from "../components/Secao3";
+import Secao4 from "../components/Secao4";
+import Secao5 from "../components/Secao5";
 
 const Home = () => {
   const location = useLocation();
@@ -141,11 +141,11 @@ const Home = () => {
 
   return (
     <div>
-      <HeroSection />
-      <AboutSection />
-      <FeaturesSection />
-      <StateSection />
-      <ContactSection />
+      <Secao1 />
+      <Secao2 />
+      <Secao3 />
+      <Secao4 />
+      <Secao5 />
     </div>
   );
 };
