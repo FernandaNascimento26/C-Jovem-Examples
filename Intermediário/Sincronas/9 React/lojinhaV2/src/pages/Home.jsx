@@ -29,12 +29,12 @@ function Home({ searchTerm }) {
               <h2 className="product-name">{product.name}</h2>
               <p className="product-price">Preço: R$ {product.price}</p>
 
+              {/* Componente de avaliação por estrelas */}
+              <StarRating productId={product.id} />
+
               <button className="add-to-cart" onClick={() => addToCart(product)}>
                 Adicionar ao Carrinho
               </button>
-
-               {/* Componente de avaliação por estrelas */}
-               <StarRating productId={product.id} />
             </div>
           ))
         ) : (
