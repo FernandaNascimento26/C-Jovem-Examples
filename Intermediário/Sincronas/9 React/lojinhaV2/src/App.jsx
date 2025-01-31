@@ -8,14 +8,14 @@ import Profile from './pages/Profile';
 import Footer from './components/Footer';
 
 function App() {
-  const [searchTerm, setSearchTerm] = useState(''); // Estado global da busca
+  const [searchFilters, setSearchFilters] = useState({});
 
   return (
     <CartProvider>
       <BrowserRouter>
-        <Navbar onSearch={setSearchTerm} /> {/* Passa a função para a Navbar */}
+        <Navbar onSearch={setSearchFilters} />
         <Routes>
-          <Route path="/" element={<Home searchTerm={searchTerm} />} /> {/* Passa a busca para a Home */}
+          <Route path="/" element={<Home searchFilters={searchFilters} />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/profile" element={<Profile />} />
         </Routes>
