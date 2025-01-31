@@ -53,27 +53,28 @@
     padding-right: 30px;
   }
   
-  .cart-icon,
-  .user-icon {
+  .cart-icon {
     position: relative;
-    color: white;
-    text-decoration: none;
     display: flex;
     align-items: center;
-    font-size: 22px;
+    color: white;
+    text-decoration: none;
   }
   
   .cart-count {
     position: absolute;
-    top: -5px;
-    right: -10px;
-    background-color: red;
+    top: -8px;
+    right: -8px;
+    background: red;
     color: white;
     font-size: 12px;
     font-weight: bold;
-    border-radius: 50%;
     padding: 4px 7px;
+    border-radius: 50%;
+    min-width: 18px;
+    text-align: center;
   }
+  
   
 
   @media (max-width: 768px) {

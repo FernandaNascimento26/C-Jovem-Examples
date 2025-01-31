@@ -4,7 +4,7 @@ import StarRating from '../components/StarRating';
 import './styles/Home.css';
 import productsData from '../data/products.json';
 
-function Home({ searchTerm }) {
+function Home({ searchFilters }) {
   const { addToCart } = useContext(CartContext);
   const [products, setProducts] = useState([]);
 
@@ -12,10 +12,30 @@ function Home({ searchTerm }) {
     setProducts(productsData);
   }, []);
 
-  // Filtrar produtos conforme a busca
-  const filteredProducts = products.filter((product) =>
-    searchTerm ? product.name.toLowerCase().includes(searchTerm.toLowerCase()) : true
-  );
+  // Verifica se os filtros estão vazios
+  const isFilterEmpty = Object.values(searchFilters).every((val) => val === '' || val === undefined);
+
+  // Se não há filtros, exibe todos os produtos
+  const filteredProducts = isFilterEmpty
+    ? products
+    : products.filter((product) => {
+        const { name, minPrice, maxPrice, minStars } = searchFilters;
+
+        if (name && !product.name.toLowerCase().includes(name.toLowerCase())) return false;
+        if (minPrice && product.price < Number(minPrice)) return false;
+        if (maxPrice && product.price > Number(maxPrice)) return false;
+
+        // Calculando média de estrelas pelo localStorage
+        const savedRatings = localStorage.getItem(`product-ratings-${product.id}`);
+        const ratings = savedRatings ? JSON.parse(savedRatings) : [];
+        const averageRating = ratings.length > 0
+          ? ratings.reduce((sum, rating) => sum + rating, 0) / ratings.length
+          : 0;
+
+        if (minStars && averageRating < Number(minStars)) return false;
+
+        return true;
+      });
 
   return (
     <div>
@@ -28,10 +48,7 @@ function Home({ searchTerm }) {
               <img src={product.image} alt={product.name} className="product-image" />
               <h2 className="product-name">{product.name}</h2>
               <p className="product-price">Preço: R$ {product.price}</p>
-
-              {/* Componente de avaliação por estrelas */}
               <StarRating productId={product.id} />
-
               <button className="add-to-cart" onClick={() => addToCart(product)}>
                 Adicionar ao Carrinho
               </button>
