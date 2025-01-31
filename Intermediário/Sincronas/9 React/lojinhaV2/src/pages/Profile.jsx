@@ -1,6 +1,7 @@
 import './styles/Profile.css';
 import construImg from '../assets/emconstru.jpeg';
 
+
 function Profile() {
     return (
       <div className="profile-container">
