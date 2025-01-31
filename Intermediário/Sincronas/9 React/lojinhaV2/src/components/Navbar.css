@@ -53,7 +53,7 @@
     padding-right: 30px;
   }
   
-  .cart-icon {
+  .cart-icon, .user-icon {
     position: relative;
     display: flex;
     align-items: center;
