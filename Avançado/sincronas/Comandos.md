@@ -6,6 +6,7 @@ npm init -y
 ```
 **O que faz?**  
 Cria o arquivo `package.json` com as dependências e scripts do projeto.  
+
 **Quando usar?** No início do projeto ou se o `package.json` não existir.
 
 ---
@@ -19,6 +20,7 @@ npm install prisma --save-dev
 - `express`: Framework para criar o servidor.  
 - `@prisma/client`: Cliente do Prisma para interagir com o banco de dados.  
 - `prisma` (dev): CLI do Prisma para migrações e schemas.  
+
 **Quando usar?** No início ou ao adicionar novas dependências.
 
 ---
@@ -29,6 +31,7 @@ npx prisma init
 ```
 **O que faz?**  
 Cria a pasta `prisma` e o arquivo `.env` para configurações.  
+
 **Quando usar?** Na primeira configuração do projeto.
 
 ---
@@ -39,6 +42,7 @@ DATABASE_URL=""
 ```
 **O que faz?**  
 Define a URL do banco de dados (Postgres no exemplo).  
+
 **Quando usar?** Após executar `npx prisma init`.
 
 ---
@@ -54,6 +58,7 @@ npx prisma migrate dev --name init
 ```
 **O que faz?**  
 Cria as tabelas no banco de dados e gera migrações.  
+
 **Quando usar?** Após alterar o `schema.prisma`.
 
 ---
@@ -64,6 +69,7 @@ npx prisma generate
 ```
 **O que faz?**  
 Gera o cliente do Prisma para interagir com o banco.  
+
 **Quando usar?** Após migrações ou mudanças no schema.
 
 ---
@@ -75,6 +81,7 @@ touch src/{app.js,server.js,prisma.js}
 ```
 **O que faz?**  
 Organiza o projeto em pastas (`controllers`, `models`, etc.).  
+
 **Quando usar?** No início do projeto.
 
 ---
@@ -84,7 +91,8 @@ Organiza o projeto em pastas (`controllers`, `models`, etc.).
 npm start
 ```
 **O que faz?**  
-Executa o servidor usando o script definido no `package.json`.  
+Executa o servidor usando o script definido no `package.json`. 
+
 **Quando usar?** Sempre que precisar iniciar o servidor.
 
 ---
@@ -106,6 +114,7 @@ curl -X POST -H "Content-Type: application/json" -d '{
 ```
 **O que faz?**  
 Testa as rotas da API via terminal.  
+
 **Quando usar?** Após iniciar o servidor.
 
 ---
@@ -116,6 +125,7 @@ npx prisma studio
 ```
 **O que faz?**  
 Abre uma interface web para gerenciar o banco de dados.  
+
 **Quando usar?** Para debug ou manipulação manual.
 
 ---
