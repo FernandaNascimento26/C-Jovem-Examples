@@ -1,7 +1,7 @@
 ## **Autenticação com JWT**
 
 ### **Introdução**
-Este guia explica como implementar autenticação usando **JWT (JSON Web Tokens)** em uma aplicação backend. Vamos cobrir desde a instalação das dependências até a criação de rotas protegidas.
+Guia de como implementar autenticação usando **JWT (JSON Web Tokens)** e.
 
 ---
 
