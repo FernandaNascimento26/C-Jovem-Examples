@@ -1,0 +1,31 @@
+body {
+  background-color: #0e0e17;
+  color: #eee;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.card {
+  background-color: #1a1a2e;
+  border: 1px solid #6f42c1;
+  border-radius: 12px;
+}
+
+input, textarea, select {
+  background-color: #2e2e3e !important;
+  color: #fff !important;
+  border: 1px solid #6f42c1 !important;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #aaa !important;
+}
+
+.btn-purple {
+  background-color: #6f42c1;
+  color: white;
+  border: none;
+}
+
+.btn-purple:hover {
+  background-color: #5a32a3;
+}
