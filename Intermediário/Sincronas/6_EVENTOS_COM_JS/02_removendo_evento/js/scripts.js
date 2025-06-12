@@ -1,5 +1,5 @@
 let btn1 = document.querySelector("#btn1");
-let btn2 = document.querySelector("#btn2");
+let btn2 = document.getElementById("btn2");
 
 function msg(){
   console.log("Clicou em mim!");
