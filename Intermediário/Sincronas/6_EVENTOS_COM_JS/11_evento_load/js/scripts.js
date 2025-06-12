@@ -1,7 +1,8 @@
-// window.addEventListener("load", function() {
-//   alert("Assine os nossos termos de uso");
-// });
+/*window.addEventListener("load", function() {
+    alert("Assine os nossos termos de uso");
+ });*/
 
-window.addEventListener("beforeunload", function(e) {
-  event.returnValue = null;
+ 
+ window.addEventListener("beforeunload", function(e) {
+  e.returnValue = null;
 });
