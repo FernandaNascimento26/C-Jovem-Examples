@@ -1,0 +1,49 @@
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login OO com JavaScript</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="form-container active" id="tela-login">
+    <h2>Login</h2>
+    <input type="email" id="email" placeholder="Email" />
+    <input type="password" id="senha" placeholder="Senha" />
+    <button id="btnEntrar">Entrar</button>
+
+    <hr>
+
+    <button id="btnToggleCadastro">Novo usuário? Cadastre-se</button>
+
+    <div id="form-cadastro" class="hidden">
+      <h3 style="margin-top:20px">Cadastrar novo usuário</h3>
+      <input type="text" id="cadNome" placeholder="Nome" />
+      <input type="email" id="cadEmail" placeholder="Email" />
+      <input type="password" id="cadSenha" placeholder="Senha" />
+      <select id="cadTipo">
+        <option value="usuario">Usuário</option>
+        <option value="admin">Administrador</option>
+      </select>
+      <button id="btnCadastrar">Cadastrar</button>
+    </div>
+
+    <div id="mensagem"></div>
+  </div>
+
+  <div class="form-container hidden" id="tela-usuario">
+    <h2>Bem-vindo(a), <span id="nomeUsuario"></span>!</h2>
+    <p>Você está logado como usuário comum.</p>
+    <button onclick="location.reload()">Sair</button>
+  </div>
+
+  <div class="form-container hidden" id="painel-admin">
+    <h2>Painel do Administrador</h2>
+    <ul id="listaUsuarios"></ul>
+    <button onclick="location.reload()">Sair</button>
+  </div>
+
+  <script src="classes.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

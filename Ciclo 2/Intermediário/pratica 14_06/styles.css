@@ -1,0 +1,39 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  background: #f4f4f4;
+}
+
+.form-container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 300px;
+  display: none;
+}
+
+input, button, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#mensagem {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-container.active {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
