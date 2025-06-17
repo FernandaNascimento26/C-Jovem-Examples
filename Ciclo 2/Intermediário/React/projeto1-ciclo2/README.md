@@ -1,12 +1,104 @@
-# React + Vite
+Perfeito! Com base no repositório que você indicou:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+📎 [https://github.com/FernandaNascimento26/C-Jovem-Examples/tree/main/Ciclo%202/Intermedi%C3%A1rio/React/projeto1-ciclo2](https://github.com/FernandaNascimento26/C-Jovem-Examples/tree/main/Ciclo%202/Intermedi%C3%A1rio/React/projeto1-ciclo2)
 
-Currently, two official plugins are available:
+Aqui está o conteúdo atualizado para substituir o `README.md` do projeto `projeto1-ciclo2`:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+### 📘 `README.md` – Projeto 1 do Ciclo 2 (React com Vite)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+````markdown
+# Projeto 1 – Ciclo 2 (React com Vite)
+
+Este projeto foi desenvolvido como parte do Ciclo 2 do curso C-Jovem, usando **React** com **Vite**.
+
+---
+
+## Como rodar este projeto localmente
+
+### 1. Clone o repositório
+
+No terminal, digite:
+
+```bash
+git clone https://github.com/FernandaNascimento26/C-Jovem-Examples.git
+````
+
+Acesse a pasta do projeto:
+
+```bash
+cd C-Jovem-Examples/Ciclo\ 2/Intermediário/React/projeto1-ciclo2
+```
+
+> **Dica:** no terminal, você pode usar `Tab` para completar os nomes com acento ou espaço.
+
+---
+
+### 2. Instale as dependências
+
+Com **npm**:
+
+```bash
+npm install
+```
+
+Ou com **yarn** (caso tenha instalado):
+
+```bash
+yarn
+```
+
+---
+
+### 3. Inicie o servidor de desenvolvimento
+
+Com **npm**:
+
+```bash
+npm run dev
+```
+
+Com **yarn**:
+
+```bash
+yarn dev
+```
+
+Acesse no navegador:
+
+📎 [http://localhost:5173](http://localhost:5173)
+
+---
+
+## 📁 Estrutura sugerida
+
+```
+src/
+├── assets/        # Imagens e arquivos estáticos
+├── components/    # Componentes reutilizáveis (ex: Botao, Card)
+├── pages/         # Páginas da aplicação (ex: Home, Sobre)
+├── App.jsx        # Componente principal
+└── main.jsx       # Ponto de entrada da aplicação
+```
+
+---
+
+## 🛠️ Tecnologias usadas
+
+* [React](https://react.dev/)
+* [Vite](https://vitejs.dev/)
+* [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+
+---
+
+## 📚 Objetivo
+
+Este projeto tem como objetivo introduzir conceitos fundamentais do React, incluindo:
+
+* Componentes funcionais
+* JSX
+* Organização de pastas
+* React Router (navegação entre páginas)
+
+---
