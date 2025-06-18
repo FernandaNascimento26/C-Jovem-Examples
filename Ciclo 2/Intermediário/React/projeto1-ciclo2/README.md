@@ -1,12 +1,6 @@
-Perfeito! Com base no repositório que você indicou:
 
-📎 [https://github.com/FernandaNascimento26/C-Jovem-Examples/tree/main/Ciclo%202/Intermedi%C3%A1rio/React/projeto1-ciclo2](https://github.com/FernandaNascimento26/C-Jovem-Examples/tree/main/Ciclo%202/Intermedi%C3%A1rio/React/projeto1-ciclo2)
 
-Aqui está o conteúdo atualizado para substituir o `README.md` do projeto `projeto1-ciclo2`:
-
----
-
-### 📘 `README.md` – Projeto 1 do Ciclo 2 (React com Vite)
+### `README.md` – Projeto 1 do Ciclo 2 (React com Vite)
 
 ````markdown
 # Projeto 1 – Ciclo 2 (React com Vite)
@@ -22,7 +16,7 @@ Este projeto foi desenvolvido como parte do Ciclo 2 do curso C-Jovem, usando **R
 No terminal, digite:
 
 ```bash
-git clone https://github.com/FernandaNascimento26/C-Jovem-Examples.git
+git clone https://github.com/FernandaNascimento26/C-Jovem-Examples/tree/main/Ciclo%202/Intermedi%C3%A1rio/React/projeto1-ciclo2
 ````
 
 Acesse a pasta do projeto:
@@ -71,7 +65,7 @@ Acesse no navegador:
 
 ---
 
-## 📁 Estrutura sugerida
+##  Estrutura sugerida
 
 ```
 src/
@@ -84,7 +78,7 @@ src/
 
 ---
 
-## 🛠️ Tecnologias usadas
+## Tecnologias usadas
 
 * [React](https://react.dev/)
 * [Vite](https://vitejs.dev/)
@@ -92,7 +86,7 @@ src/
 
 ---
 
-## 📚 Objetivo
+##  Objetivo
 
 Este projeto tem como objetivo introduzir conceitos fundamentais do React, incluindo:
 
