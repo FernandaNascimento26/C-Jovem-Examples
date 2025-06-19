@@ -71,6 +71,4 @@ Este repositório é de uso educacional e está sob a [Licença MIT](LICENSE).
 
 Desenvolvido e organizado por [Fernanda Nascimento](https://github.com/FernandaNascimento26).
 
-```
-
 ---
