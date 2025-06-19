@@ -2,7 +2,6 @@
 
 ### `README.md` – Projeto 1 do Ciclo 2 (React com Vite)
 
-````markdown
 # Projeto 1 – Ciclo 2 (React com Vite)
 
 Este projeto foi desenvolvido como parte do Ciclo 2 do curso C-Jovem, usando **React** com **Vite**.
