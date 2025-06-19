@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Compras</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <!-- Tela inicial para o nome do usuário -->
+  <div id="tela-nome" class="tela-nome">
+    <h2>Bem-vindo!</h2>
+    <p>Digite seu nome para iniciar:</p>
+    <input type="text" id="input-nome" maxlength="20" placeholder="Seu nome">
+    <button id="btn-entrar">Entrar</button>
+  </div>
+
+  <!-- Área principal da lista de compras (escondida no início) -->
+  <div id="container" class="hidden">
+  <h1>Lista de Compras</h1>
+  <div class="mensagem-nome" id="mensagem-nome"></div>
+  <div class="add-item">
+    <input type="text" id="novo-item" maxlength="32" placeholder="Novo item...">
+    <button id="btn-adicionar">Adicionar</button>
+  </div>
+  <ul id="lista-compras" class="lista-compras"></ul>
+  <div class="status-lista">
+    <span id="contador"></span>
+  </div>
+</div>
+
+  <!-- Importa o JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
