@@ -1,0 +1,109 @@
+/* src/components/OrderPage.css */
+
+.order-container {
+    flex: 1; /* Permite que o container se expanda para preencher a área disponível */
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Um pequeno espaçamento antes do footer */
+}
+
+.order-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.menu-category-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.category-button {
+    width: 48%;
+    margin-bottom: 10px;
+    background-color: #8B4513 !important; /* Marrom chocolate */
+    color: #ffffff; /* Fonte clara */
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+.category-button:hover {
+    background-color: #A0522D; /* Marrom mais claro no hover */
+}
+
+.order-container h3 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #8B4513; /* Marrom chocolate */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+    background-color: #A0522D; /* Marrom mais claro no hover */
+}
+
+/* Estilo para os botões no modal */
+.modal-footer .btn-primary {
+    background-color: #8B4513; /* Marrom chocolate */
+    border-color: #8B4513; /* Marrom chocolate */
+    color: #ffffff; /* Fonte clara */
+}
+
+.modal-footer .btn-primary:hover {
+    background-color: #A0522D; /* Marrom mais claro no hover */
+    border-color: #A0522D; /* Marrom mais claro no hover */
+}
+
+footer {
+    background-color: #8B4513; /* Cor de fundo do footer */
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    margin-top: auto; /* Mantém o footer no final da página */
+    position: relative;
+    bottom: 0;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Semáforo Inteligente</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="tela-nome" class="tela-nome">
+    <h2>Bem-vindo!</h2>
+    <p>Digite seu nome para iniciar:</p>
+    <input type="text" id="input-nome" placeholder="Seu nome" maxlength="20">
+    <button id="btn-entrar">Entrar</button>
+  </div>
+  <div id="container" class="hidden">
+    <h1>Semáforo Inteligente</h1>
+    <div class="mensagem-nome" id="mensagem-nome"></div>
+    <div class="semaforo">
+      <div class="luz luz-vermelha" id="luz-vermelha"></div>
+      <div class="luz luz-amarela" id="luz-amarela"></div>
+      <div class="luz luz-verde" id="luz-verde"></div>
+    </div>
+    <button id="pedestre-btn">Pedir para atravessar</button>
+    <div class="painel-info">
+      <span id="status">Status: Carros em movimento</span>
+      <span id="contador">Tempo: 10s</span>
+    </div>
+  </div>
+  <audio id="audio-troca" src="https://cdn.pixabay.com/audio/2022/07/26/audio_124bfa88a2.mp3"></audio>
+  <script src="script.js"></script>
+</body>
+</html>

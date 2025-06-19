@@ -1,0 +1,65 @@
+/* src/components/Stories.css */
+.stories-section {
+    padding: 50px 20px;
+    background-color: #f9f4ef;
+    color: #4a2c2a;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.stories-section h1 {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #8b5e3c;
+}
+
+.stories-section p {
+    font-family: 'Georgia', serif;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.story-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: left;
+}
+
+.story {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.story h2 {
+    font-family: 'Georgia', serif;
+    font-size: 1.5rem;
+    color: #8b5e3c;
+    margin-bottom: 10px;
+}
+
+.story p {
+    font-family: 'Verdana', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+    .story-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1024px) {
+    .story-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

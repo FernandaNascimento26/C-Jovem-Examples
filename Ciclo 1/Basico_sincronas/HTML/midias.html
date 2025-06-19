@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos de Mídias em HTML</title>
+</head>
+<body>
+
+    <h1>Exemplos de Uso de Mídias em HTML</h1>
+
+    <!-- Exemplo de Imagem -->
+    <h2>Imagem</h2>
+    <p>Abaixo está um exemplo de imagem:</p>
+    <img src="../midias/img/react.png" alt="Exemplo de Imagem" width="300" height="200">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRGz7ftJtlGmcNE48stXJEhG6KBnmY0FJACQ&s" alt="Exemplo de Imagem" width="300" height="200">
+    <!-- Exemplo de Áudio -->
+    <h2>Áudio</h2>
+    <p>Abaixo está um exemplo de áudio embutido com controles:</p>
+    <audio controls>
+        <source src="../midias/audio/Mercyful Fate - Melissa + Come To The Sabbath - Legendado & Análise.mp3" type="audio/ogg">
+        <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+
+    <!-- Exemplo de Vídeo -->
+    <h2>Vídeo</h2>
+    <p>Abaixo está um exemplo de vídeo embutido com controles:</p>
+    <video width="320" height="240" controls>
+        <source src="../midias/video/Mercyful Fate.mp4" type="video/mp4">
+        <source src="https://www.youtube.com/watch?v=92gA4ugIdQw" type="video/ogg">
+        Seu navegador não suporta o elemento de vídeo.
+    </video>
+
+    <!-- Exemplo de Iframe (Incorporando Vídeo do YouTube) -->
+    <h2>Iframe - Vídeo do YouTube</h2>
+    <p>Abaixo está um exemplo de um vídeo do YouTube embutido:</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ANXAdWfVQ8Q?si=a_k_tUKfR35v1krJ&amp;start=2412" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <!-- Exemplo de Embed (PDF) -->
+    <h2>Embed - PDF</h2>
+    <p>Abaixo está um exemplo de um PDF embutido:</p>
+    <embed src="https://www.nre.seed.pr.gov.br/arquivos/File/telemaco/crte/internet_navegadores_pesquisa.pdf" type="application/pdf">
+
+    <!-- Exemplo de Object (PDF) -->
+    <h2>Object - PDF</h2>
+    <p>Abaixo está um exemplo de um PDF embutido usando a tag <code>&lt;object&gt;</code>:</p>
+    <object data="https://www.nre.seed.pr.gov.br/arquivos/File/telemaco/crte/internet_navegadores_pesquisa.pdf">
+        <p>Seu navegador não suporta a exibição de PDFs. <a href="https://www.nre.seed.pr.gov.br/arquivos/File/telemaco/crte/internet_navegadores_pesquisa.pdf">Clique aqui para baixar o PDF</a>.</p>
+    </object>
+
+</body>
+</html>

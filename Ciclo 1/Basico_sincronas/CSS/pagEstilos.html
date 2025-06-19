@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+
+     <!--Linkagem interna do CSS-->
+    <style>
+        h3 {
+          color: green;
+          background-color: rgb(205, 180, 226);
+        }
+    </style>
+
+  <!--Linkagem externa do CSS-->
+<link rel="stylesheet" href="estilos.css">
+
+</head>
+<body>
+
+    <!--Linkagem inline do CSS-->
+    <h2>CSS inline</h2>
+    <p style="color: blue; font-size: 20px;">Texto com estilo inline. <br>
+        
+        <strong>Descrição</strong>: O CSS inline é aplicado diretamente no elemento HTML usando o atributo style. <br>
+        <strong>Quando usar</strong>: Ideal para pequenos ajustes específicos que não se repetem, mas não recomendado para grandes projetos, pois dificulta a manutenção.
+    
+    </p>
+
+
+    <h3 class="estiloAula"> CSS Interno (embutido)</h3>
+
+    <strong>Descrição</strong>:  O CSS interno é colocado dentro da própria página HTML, em uma tag style dentro do head. <br>
+    <strong>Quando usar</strong>: Útil para páginas simples ou quando os estilos são exclusivos de uma única página.
+
+
+    <h4 id="minhatag">CSS Externo </h4>
+    <strong>Descrição</strong>: O CSS externo é escrito em um arquivo .css separado, que é vinculado ao HTML usando a tag link. <br>
+    <strong>Quando usar</strong>: É o método mais recomendado para projetos maiores e quando o mesmo estilo precisa ser compartilhado entre várias páginas.
+     
+    
+</body>
+</html>

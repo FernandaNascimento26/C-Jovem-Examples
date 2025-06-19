@@ -1,0 +1,98 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #111;
+    color: white;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 25px; 
+  }
+  
+  .logo {
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .search-bar {
+    background-color: #222;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    color: white;
+    outline: none;
+    width: 300px;
+    transition: all 0.3s ease;
+  }
+  
+  .search-bar:focus {
+    width: 350px;
+  }
+  
+  .search-bar::placeholder {
+    color: #bbb;
+  }
+  
+
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 30px; 
+    padding-right: 30px;
+  }
+  
+  .cart-icon, .user-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 7px;
+    border-radius: 50%;
+    min-width: 18px;
+    text-align: center;
+  }
+  
+  
+
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 10px 20px; 
+    }
+  
+    .search-bar {
+      width: 200px;
+    }
+  
+    .search-bar:focus {
+      width: 250px;
+    }
+  
+    .navbar-right {
+      gap: 15px; 
+      padding-right: 15px;
+    }
+  }
+  

@@ -1,0 +1,26 @@
+
+    h3{
+        font-size: 100px;
+        color: pink;
+    }
+
+ /*   p{
+        font-size: 30px;
+        color: violet;
+        text-align: center;
+        background-color: lightskyblue;
+    }
+*/
+
+.paragrafosEspeciais{
+    background-color: magenta;
+}
+
+.paragrafoColorido{
+    color: blue;
+}
+
+#unica{
+    width: 30%;
+    height: 30%;
+}

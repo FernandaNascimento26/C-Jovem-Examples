@@ -1,4 +1,5 @@
 import Buttom from '../components/Buttom.jsx';
+
 function Home(){
     return(
         <>

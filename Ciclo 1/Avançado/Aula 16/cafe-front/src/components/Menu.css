@@ -1,0 +1,121 @@
+/* Ajustes gerais */
+.menu-container {
+    background-color: #2c2c2c;
+    color: #ffffff;
+    font-family: 'Merriweather', serif;
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.menu-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.menu-header h1 {
+    font-size: 2.5rem; /* Reduzido para melhor ajuste no mobile */
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+    color: #f5a623;
+}
+
+.menu-header p {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    color: #f5a623;
+}
+
+.menu-content {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    flex-wrap: wrap; /* Permitir que o layout se ajuste ao conteúdo */
+}
+
+.menu-image {
+    display: flex;
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+    width: 400px; /* Garantir que a imagem ocupe a largura total */
+    height: 300px;
+}
+
+.menu-image img {
+    max-width: 100%; /* Imagem ocupa o máximo da largura disponível */
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 20px; /* Espaçamento abaixo da imagem */
+}
+.menu-tabs {
+    flex: 1;
+    min-width: 100%; /* Garantir que o menu ocupe a largura total */
+}
+
+/* Ajustes para os itens da lista */
+ul.menu-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.2rem; /* Tamanho ajustado para melhor leitura no mobile */
+    line-height: 2;
+}
+
+ul.menu-list li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+ul.menu-list li span {
+    font-weight: bold;
+}
+
+/* Estilos para as abas */
+.nav-tabs .nav-link {
+    color: #f5a623;
+    font-weight: bold;
+    font-size: 1rem; /* Tamanho reduzido para melhor ajuste */
+    padding: 10px;
+    text-align: center;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #f5a623;
+    color: #2c2c2c;
+    border: none;
+}
+
+.nav-tabs .nav-link:hover {
+    color: #ffffff;
+    background-color: #f5a623;
+}
+
+/* Estilos específicos para dispositivos móveis */
+@media (max-width: 768px) {
+    .menu-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-image img {
+        width: 500px; /* Permitir que a imagem ocupe a maior parte da largura */
+        max-width: 100%; /* Remover a limitação de largura para mobile */
+        margin-bottom: 15px;
+    }
+
+    ul.menu-list li {
+        font-size: 0.9rem; /* Tamanho menor para melhorar a leitura */
+    }
+
+    .nav-tabs .nav-link {
+        font-size: 1rem; /* Tamanho ajustado para melhor visualização */
+    }
+
+    .menu-header h1 {
+        font-size: 1rem; /* Ajustar o tamanho do título */
+    }
+}

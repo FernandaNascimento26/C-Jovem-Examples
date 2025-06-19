@@ -1,0 +1,100 @@
+body {
+  background: linear-gradient(135deg, #5637DD, #A259F7 80%);
+  min-height: 100vh;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#container {
+  background: #fff;
+  padding: 32px 32px 18px 32px;
+  border-radius: 20px;
+  box-shadow: 0 10px 24px 0 rgba(50,20,60,0.16);
+  min-width: 320px;
+  text-align: center;
+  transition: box-shadow .2s;
+  animation: pop .7s cubic-bezier(.42,0,.58,1.0);
+}
+@keyframes pop {
+  0% { transform: scale(.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.tela-nome {
+  background: #fff;
+  padding: 28px 24px 18px 24px;
+  border-radius: 20px;
+  box-shadow: 0 8px 22px 0 rgba(60,30,80,0.14);
+  min-width: 320px;
+  text-align: center;
+}
+.hidden { display: none !important; }
+
+h1 {
+  color: #5637DD;
+  margin-bottom: 10px;
+}
+.mensagem-nome {
+  margin-bottom: 20px;
+  color: #363636;
+  font-size: 1.12em;
+}
+.semaforo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 18px 0 16px 0;
+  background: #222;
+  padding: 16px 22px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px 0 rgba(40,10,50,0.14);
+}
+.luz {
+  width: 44px;
+  height: 44px;
+  background: #aaa;
+  border-radius: 50%;
+  margin: 10px 0;
+  box-shadow: 0 0 10px #0006;
+  border: 4px solid #111;
+  transition: background .5s, box-shadow .4s;
+}
+.luz-vermelha.on    { background: #fa2c2c; box-shadow: 0 0 24px #fa2c2c88; }
+.luz-amarela.on     { background: #ffd900; box-shadow: 0 0 24px #ffe65b99; }
+.luz-verde.on       { background: #27df63; box-shadow: 0 0 24px #27df63aa; }
+
+button {
+  background: linear-gradient(90deg,#8A4DFD,#5637DD 80%);
+  color: #fff;
+  border: none;
+  border-radius: 16px;
+  padding: 12px 28px;
+  margin: 10px 0 12px 0;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 1px 6px #7040af33;
+  transition: background .3s, transform .1s;
+}
+button:hover {
+  background: linear-gradient(90deg,#5637DD,#A259F7 80%);
+  transform: scale(1.04);
+}
+.painel-info {
+  display: flex;
+  justify-content: space-between;
+  color: #333;
+  font-size: 1.06em;
+  margin-top: 8px;
+  margin-bottom: 5px;
+  padding: 0 8px;
+}
+input[type="text"] {
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  width: 160px;
+  margin-bottom: 14px;
+}

@@ -3,12 +3,13 @@ import Footer from './pages/Footer.jsx';
 
 function App() {
   return (
-    <>
+    <>        
       <p>Hello World!!</p>
 
       <Home />
 
       <Footer />
+
     </>
   )
 }
