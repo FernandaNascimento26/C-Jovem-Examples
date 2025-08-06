@@ -1,7 +1,7 @@
 const prisma = require('../prisma');
 
 const getAllAlunos = async() => {
-    return prisma.Aluno.findMany({
+    return prisma.aluno.findMany({
         orderBy: {
             nome: 'Desc'
         }
@@ -9,15 +9,15 @@ const getAllAlunos = async() => {
 }
 
 const getAlunoById = async(id) => {
-    return prisma.Aluno.findUnique({
+    return prisma.aluno.findUnique({
         where: {
-            id: idS
+            id: id
         }
     });
 }
 
 const addAluno = async(nome, data_nascimento, email) =>{
-    return prisma.Aluno.create({
+    return prisma.aluno.create({
         data: {
             nome: nome,
             data_nascimento: data_nascimento,
@@ -27,7 +27,7 @@ const addAluno = async(nome, data_nascimento, email) =>{
 }
 
 const updateAluno = async(id_aluno,nome, data_nascimento, email) => {
-    const aluno = await prisma.Aluno.findUnique({
+    const aluno = await prisma.aluno.findUnique({
         where: {
             id_aluno: id_aluno
         }
@@ -37,7 +37,7 @@ const updateAluno = async(id_aluno,nome, data_nascimento, email) => {
         throw new Error('Aluno não encontrado');
     }
 
-    return prisma.Aluno.update({
+    return prisma.aluno.update({
         where: {
             id_aluno: id_aluno
         },
@@ -51,7 +51,7 @@ const updateAluno = async(id_aluno,nome, data_nascimento, email) => {
 
 
 const deleteAluno = async(id_aluno) => {
-    const aluno = await prisma.Aluno.findUnique({
+    const aluno = await prisma.aluno.findUnique({
         where: {
             id_aluno: id_aluno
         }
@@ -61,7 +61,7 @@ const deleteAluno = async(id_aluno) => {
         throw new Error('Aluno não encontrado');
     }
 
-    return prisma.Aluno.delete({
+    return prisma.aluno.delete({
         where: {
             id_aluno: id_aluno
         }

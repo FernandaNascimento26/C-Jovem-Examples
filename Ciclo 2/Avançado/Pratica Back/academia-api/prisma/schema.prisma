@@ -14,9 +14,9 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Aluno {
+model aluno {
   id_aluno Int @id @default(autoincrement())
-  nome String
+  nome String?l
   data_nascimento DateTime
   email String @unique 
 }
