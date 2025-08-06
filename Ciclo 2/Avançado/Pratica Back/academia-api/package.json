@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@prisma/client": "^6.13.0",
+    "cors": "^2.8.5",
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
     "prisma": "^6.13.0"
@@ -8,10 +9,9 @@
   "devDependencies": {
     "nodemon": "^3.1.10"
   },
-
   "scripts": {
     "dev": "nodemon src/index.js",
     "start": "node src/index.js",
-    "prisma":"prisma"
+    "prisma": "prisma"
   }
 }
