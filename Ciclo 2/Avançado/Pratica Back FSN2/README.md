@@ -2,6 +2,9 @@
 
 Este projeto fornece uma API REST para gerenciamento de alunos, utilizando Node.js, Express e Prisma.
 
+> **Repositório:**
+> [https://github.com/FernandaNascimento26/C-Jovem-Examples/tree/main/Ciclo%202/Avançado/Pratica%20Back%20FSN2](https://github.com/FernandaNascimento26/C-Jovem-Examples/tree/main/Ciclo%202/Avançado/Pratica%20Back%20FSN2)
+
 ---
 
 ## Pré-requisitos
@@ -15,11 +18,14 @@ Este projeto fornece uma API REST para gerenciamento de alunos, utilizando Node.
 
 ## Passos para execução local
 
-### 1. Clonar o repositório
+### 1. Clonar o repositório e navegar até o diretório do projeto
 
 ```bash
-git clone <URL_DO_REPOSITORIO>
-cd <nome_da_pasta>
+# Clonar o repositório principal
+git clone https://github.com/FernandaNascimento26/C-Jovem-Examples.git
+
+# Entrar na pasta do exercício Prática Back FSN2
+cd "C-Jovem-Examples/Ciclo 2/Avançado/Pratica Back FSN2"
 ```
 
 ### 2. Criar o banco de dados
@@ -39,7 +45,7 @@ CREATE DATABASE nome_do_banco;
    ```bash
    cp .env.example .env
    ```
-2. Edite o `.env` e configure a conexão:
+2. Edite o `.env` e configure a URL de conexão:
 
    ```dotenv
    DATABASE_URL="postgresql://<usuario>:<senha>@localhost:5432/<nome_do_banco>?schema=public"
@@ -99,7 +105,7 @@ Verifique se a seção `scripts` está assim:
   npm start
   ```
 
-Por padrão, a API será exposta em `http://localhost:3001`.
+A API estará disponível em `http://localhost:3001` por padrão.
 
 ---
 
@@ -180,4 +186,3 @@ curl --request POST \
 ## Contribuição
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests.
-
