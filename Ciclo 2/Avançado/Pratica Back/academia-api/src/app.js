@@ -18,7 +18,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use('api/aluno', alunoRoutes);
+app.use('/api/aluno', alunoRoutes);
 
 
 module.exports = app;

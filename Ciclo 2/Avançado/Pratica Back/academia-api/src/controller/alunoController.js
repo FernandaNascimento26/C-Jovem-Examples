@@ -1,3 +1,4 @@
+const e = require('cors');
 const{ getAllAlunos,getAlunoById, addAluno, updateAluno,deleteAluno} = require('../models/alunoModel');
 
 
@@ -8,7 +9,7 @@ const getAllAlunosHandler = async(req, res) =>{
     }
 
     catch(error){
-        res.status(500).json({error: "Erro ao buscar alunos"});
+        res.status(500).json({error: error.message || "Erro ao buscar alunos"});
     }
 
 }
