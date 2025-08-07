@@ -7,19 +7,19 @@ const getAllAlunosHandler = async(req, res) =>{
         res.status(200).json(alunos);
     }
     catch(error){
-        res.status(500).json({ error: 'Erro ao buscar alunos' });
+        res.status(500).json({ error: error.message });
     }
 }
 
 const getAlunoByIdHandler = async(req, res) => {
-    const {id_aluno} = req.params;
+    const id_aluno = parseInt(req.params.id_aluno);
 
     try{
 
         const aluno = await getAlunoById(id_aluno);
 
         if(!aluno){
-            return res.status(404).json({ error: 'Aluno não encontrado'});
+            return res.status(404).json({ error: error.message});
         }
 
         res.status(200).json(aluno);
@@ -33,8 +33,14 @@ const getAlunoByIdHandler = async(req, res) => {
 const addAlunoHandler = async(req, res) => {
     const{nome, data_nas, email} = req.body;
 
-    if(!nome || !email){
-        return res.status(400).json({ error: 'Nome e email são obrigatórios'});
+    console.log(nome, data_nas, email);
+
+    if(!nome){
+        return res.status(400).json({ error: 'Nome obrigatórios'});
+    }
+
+    if(!email){
+        return res.status(400).json({ error: 'Email obrigatório'});     
     }
 
     try{
@@ -44,7 +50,7 @@ const addAlunoHandler = async(req, res) => {
     }
 
     catch(error){
-        res.status(500).json({ error: 'Erro ao adicionar aluno' });
+        res.status(500).json({ error: error });
     }
 
 }
