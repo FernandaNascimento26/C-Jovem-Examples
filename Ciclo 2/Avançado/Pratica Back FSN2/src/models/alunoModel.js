@@ -4,7 +4,7 @@ const getAllAlunos = async() => {
 
     return prisma.aluno.findMany({
         orderBy: {
-            nome: 'DESC'
+            nome: 'desc'
         }
     })
 }
@@ -34,7 +34,7 @@ const updateAluno = async(id_aluno, nome, data_nas, email) => {
         throw new Error('Aluno não encontrado');
     }
 
-    return prisma.update({
+    return prisma.aluno.update({
         where: {
             id_aluno: id_aluno
         },

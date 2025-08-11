@@ -3,15 +3,15 @@ const prisma = require('../prisma');
 const getAllAlunos = async() => {
     return prisma.aluno.findMany({
         orderBy: {
-            nome: 'Desc'
+            nome: 'desc'
         }
 });
 }
 
-const getAlunoById = async(id) => {
+const getAlunoById = async(id_aluno) => {
     return prisma.aluno.findUnique({
         where: {
-            id: id
+            id_aluno: id_aluno
         }
     });
 }
