@@ -7,9 +7,9 @@ app.use(express.json());
 const alunoRoutes = require('./routes/alunoRoutes');
 
 app.get('/', (req, res) => {
-    res.send('API de Alunos');
+    res.send('API ok!!');
 });
 
-app.use('/api/aluno', alunoRoutes);
+app.use('/api/alunos', alunoRoutes);
 
 module.exports = app;

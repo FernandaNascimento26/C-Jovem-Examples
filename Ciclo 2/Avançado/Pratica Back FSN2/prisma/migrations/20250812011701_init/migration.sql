@@ -1,8 +1,8 @@
 -- CreateTable
 CREATE TABLE "public"."aluno" (
-    "id_aluno" SERIAL NOT NULL,
+    "id_aluno" INTEGER NOT NULL,
     "nome" TEXT NOT NULL,
-    "data_nascimento" TIMESTAMP(3) NOT NULL,
+    "data_nas" TIMESTAMP(3),
     "email" TEXT NOT NULL,
 
     CONSTRAINT "aluno_pkey" PRIMARY KEY ("id_aluno")

@@ -19,21 +19,21 @@ const getAlunoByIdHandler = async(req, res) => {
         const aluno = await getAlunoById(id_aluno);
 
         if(!aluno){
-            return res.status(404).json({ error: error.message});
+            return res.status(404).json({ error:"Aluno não encontrado!"});
         }
 
         res.status(200).json(aluno);
     }
 
     catch(error){
-        res.status(500).json({ error: 'Erro ao buscar aluno' });
+        res.status(500).json({ error: "Erro ao buscar aluno"});
     }
 }
 
 const addAlunoHandler = async(req, res) => {
     const{nome, data_nas, email} = req.body;
 
-    console.log(nome, data_nas, email);
+    //console.log(nome, data_nas, email);
 
     if(!nome){
         return res.status(400).json({ error: 'Nome obrigatórios'});

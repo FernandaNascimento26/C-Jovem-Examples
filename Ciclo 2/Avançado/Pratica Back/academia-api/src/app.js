@@ -1,19 +1,17 @@
 const express = require('express');
-const cors = require('cors');
+const app = express();
+
+
+app.use(express.json());
 
 const alunoRoutes = require('./routes/alunoRoutes');
 
-const app = express();
-
-app.use(cors());
-app.use(express.json())
-
 app.get('/', (req, res) => {
-    res.send('API Academia funcionando!');  
-
+    res.send('API Academia');
 });
 
-app.use('/api/aluno', alunoRoutes);
+app.use('/api/alunos', alunoRoutes);
+
 
 
 module.exports = app;

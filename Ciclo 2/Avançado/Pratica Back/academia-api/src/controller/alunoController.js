@@ -1,4 +1,3 @@
-const e = require('cors');
 const{ getAllAlunos,getAlunoById, addAluno, updateAluno,deleteAluno} = require('../models/alunoModel');
 
 
@@ -47,7 +46,7 @@ const addAlunoHandler = async(req, res) => {
     }
 
     catch(error){
-        res.status(500).json({error: "Erro ao adicionar aluno"});
+        res.status(500).json({error: error.message});
     }
 
 }
