@@ -14,10 +14,21 @@ datasource db {
 }
 
 model aluno {
-  id_aluno Int @id @default(autoincrement())
-  nome String?
+  id_aluno        Int       @id @default(autoincrement())
+  nome            String?
   data_nascimento DateTime
-  email String @unique 
+  email           String    @unique
+
+  treinos         treino[]
 }
 
+model treino {
+  id_treino   Int      @id @default(autoincrement())
+  descricao   String
+  data_inicio DateTime @default(now())
+  aluno_id    Int
 
+  aluno aluno @relation(fields: [aluno_id], references: [id_aluno])
+
+  @@index([aluno_id])
+}

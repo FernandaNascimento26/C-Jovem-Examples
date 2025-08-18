@@ -1,16 +1,18 @@
 const express = require('express');
 const app = express();
+const alunoRoutes = require('./routes/alunoRoutes');
+const treinoRoutes = require('./routes/treinoRoutes');
 
 
 app.use(express.json());
 
-const alunoRoutes = require('./routes/alunoRoutes');
 
 app.get('/', (req, res) => {
     res.send('API Academia');
 });
 
 app.use('/api/alunos', alunoRoutes);
+app.use(treinoRoutes);
 
 
 
