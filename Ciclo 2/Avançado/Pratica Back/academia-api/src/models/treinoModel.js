@@ -1,9 +1,9 @@
 const prisma = require('../prisma');
 
-const getTreinos = async (id_aluno) => {
+const getTreinos = async ( aluno_id) => {
     return prisma.treino.findMany({
     where: {
-            id_aluno: Number(id_aluno)
+            aluno_id:  aluno_id
         },
         orderBy: {
             data_inicio: 'desc'
@@ -14,17 +14,18 @@ const getTreinos = async (id_aluno) => {
 const getTreinoById = async (id_treino) => {
     return prisma.treino.findUnique({
         where: {
-            id_treino: Number(id_treino)
+            id_treino: id_treino
         }
     });
 }
 
-const addTreino = async (id_aluno,descricao,data_inicio) => {
+const addTreino = async (descricao,data_inicio,aluno_id) => {
     return prisma.treino.create({
         data: {
-            id_aluno: Number(id_aluno),
+            
             descricao: descricao,
-            data_inicio: new Date(data_inicio)
+            data_inicio: new Date(data_inicio),
+            aluno_id: Number(aluno_id)
         }
     });
 }
