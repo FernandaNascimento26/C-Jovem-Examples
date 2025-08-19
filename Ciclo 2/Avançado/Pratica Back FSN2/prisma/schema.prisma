@@ -18,13 +18,6 @@ model aluno {
   nome String
   data_nas DateTime?
   email String @unique
-}
-
-model aluno {
-  id_aluno Int @id @default(autoincrement())
-  nome String
-  data_nas DateTime?
-  email String @unique
 
   treinos treino[]
 }
