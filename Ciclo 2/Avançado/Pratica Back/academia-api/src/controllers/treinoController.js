@@ -1,4 +1,3 @@
-const e = require('express');
 const {getTreinos,getTreinoById,addTreino,updateTreino,deleteTreino} = require('../models/treinoModel');
 
 const getAllTreinosByAluno = async (req, res) => {
@@ -46,7 +45,7 @@ const addTreinoHandler = async (req, res) => {
 const updateTreinoHandler = async (req, res) => {
     const id_treino = parseInt(req.params.id_treino);
     const {descricao, data_inicio} = req.body;
-    console.log(req.body);
+    
     if (!descricao) {
         return res.status(400).json({ error: 'Dados incompletos' });
     }
