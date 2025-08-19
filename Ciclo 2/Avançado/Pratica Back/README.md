@@ -3,7 +3,7 @@
 Este projeto fornece uma API REST para gerenciamento de alunos, utilizando Node.js, Express e Prisma.
 
 > **Repositório:**
-> [https://github.com/FernandaNascimento26/C-Jovem-Examples/tree/main/Ciclo%202/Avançado/Pratica%20Back%20FSN2](https://github.com/FernandaNascimento26/C-Jovem-Examples/tree/main/Ciclo%202/Avançado/Pratica%20Back%20FSN2)
+> [https://github.com/FernandaNascimento26/C-Jovem-Examples/tree/main/Ciclo%202/Avançado/Pratica%20Back%20FSN2](https://github.com/FernandaNascimento26/C-Jovem-Examples/blob/main/Ciclo%202/Avan%C3%A7ado/Pratica%20Back)
 
 ---
 
@@ -24,8 +24,8 @@ Este projeto fornece uma API REST para gerenciamento de alunos, utilizando Node.
 # Clonar o repositório principal
 git clone https://github.com/FernandaNascimento26/C-Jovem-Examples.git
 
-# Entrar na pasta do exercício Prática Back FSN2
-cd "C-Jovem-Examples/Ciclo 2/Avançado/Pratica Back"
+# Entrar na pasta do exercício Prática Back/academia-api
+cd "C-Jovem-Examples/Ciclo 2/Avançado/Pratica Back/academia-api"
 ```
 
 ### 2. Criar o banco de dados
