@@ -19,3 +19,23 @@ model aluno {
   data_nas DateTime?
   email String @unique
 }
+
+model aluno {
+  id_aluno Int @id @default(autoincrement())
+  nome String
+  data_nas DateTime?
+  email String @unique
+
+  treinos treino[]
+}
+
+model treino{
+  id_treino Int @id @default(autoincrement())
+  descricao String
+  data_inicio DateTime @default(now())
+  id_aluno Int
+
+  aluno aluno @relation(fields:[id_aluno],references:[id_aluno])
+
+  @@index([id_aluno])
+}
