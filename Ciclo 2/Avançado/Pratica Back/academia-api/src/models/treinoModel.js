@@ -22,7 +22,6 @@ const getTreinoById = async (id_treino) => {
 const addTreino = async (descricao,data_inicio,aluno_id) => {
     return prisma.treino.create({
         data: {
-            
             descricao: descricao,
             data_inicio: new Date(data_inicio),
             aluno_id: Number(aluno_id)

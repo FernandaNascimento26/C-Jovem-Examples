@@ -54,7 +54,6 @@ const updateTreinoHandler = async (req, res) => {
     }
     try {
         const treinoAtualizado = await updateTreino(id_treino, descricao, data_inicio);
-        console.log(treinoAtualizado);
         res.status(200).json(treinoAtualizado);
     } catch (error) {
         if (error.message === 'Treino não encontrado') {

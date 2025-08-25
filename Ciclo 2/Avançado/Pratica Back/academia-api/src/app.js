@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/alunos', alunoRoutes);
-app.use(treinoRoutes);
+app.use('/api',treinoRoutes);
 
 
 
