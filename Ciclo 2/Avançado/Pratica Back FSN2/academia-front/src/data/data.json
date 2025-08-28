@@ -1,0 +1,12 @@
+{
+  "alunos": [
+    { "id_aluno": 1, "nome": "Ana Souza", "email": "ana@example.com", "data_nascimento": "1999-05-20" },
+    { "id_aluno": 2, "nome": "Carlos Lima", "email": "carlos@example.com", "data_nascimento": "1995-08-12" },
+    { "id_aluno": 3, "nome": "Fernanda", "email": "nanda@example.com", "data_nascimento": "1995-08-12" }
+  ],
+  "treinos": [
+    { "id_treino": 1, "descricao": "Treino A - superiores", "data_inicio": "2025-08-01", "aluno_id": 1 },
+    { "id_treino": 2, "descricao": "Treino B - inferiores", "data_inicio": "2025-08-03", "aluno_id": 1 },
+    { "id_treino": 3, "descricao": "Treino C - cardio",     "data_inicio": "2025-08-05", "aluno_id": 2 }
+  ]
+}

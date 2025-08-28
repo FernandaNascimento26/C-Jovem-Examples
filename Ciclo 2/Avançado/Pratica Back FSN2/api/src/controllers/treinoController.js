@@ -27,7 +27,7 @@ const getTreinoByIdHandler = async(req,res) =>{
 
 const addTreinoHandler = async(req,res) =>{
     const {descricao,data_inicio,id_aluno} = req.body
-    if(!descricao || id_aluno){
+    if(!descricao || !id_aluno){
         res.status(400).json({error:'Dados incompletos!'})
     }
     if(descricao.trim().length < 20){
@@ -37,7 +37,7 @@ const addTreinoHandler = async(req,res) =>{
         const novotreino = await addTreino(descricao,data_inicio,id_aluno)
         res.status(201).json(novotreino)
     }catch(error){
-        res.status(500).json({error:'Erro ao adicionar o treino'})
+        res.status(500).json({error:error.message})
     }
 }
 

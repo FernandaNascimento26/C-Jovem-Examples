@@ -89,7 +89,7 @@ const deleteAlunoHandler = async(req, res) => {
         if(error.message === 'Aluno não encontrado'){
             return res.status(404).json({ error: 'Aluno não encontrado'});
         }
-        res.status(500).json({ error: 'Erro ao deletar aluno' });
+        res.status(500).json({ error: error.message });
     }
 }
 
