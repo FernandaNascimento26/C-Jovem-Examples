@@ -33,16 +33,16 @@ const [form, setForm] = useState({ nome: '', email: '', data_nas: '' })
     (async () => {
       try{
         setLoading(true)
-        const data = alunoService.buscarDadosAluno(id)
-        console.log(data)
+        const data = await alunoService.buscarDadosAluno(id)
         setForm({
           nome: data?.nome || '',
           email: data?.email || '',
 
           //formatação da data para o padrão yyyy-MM-dd
-          data_nas: data?.data_nas ? new Date(data.data_nas).toString().slice(0,10) : ''
-         }) 
-         console.log("formulario:",form)
+          data_nas: data?.data_nas
+            ? new Date(data.data_nas).toISOString().slice(0,10)
+            : ''
+        })
         
         }
       catch(error){

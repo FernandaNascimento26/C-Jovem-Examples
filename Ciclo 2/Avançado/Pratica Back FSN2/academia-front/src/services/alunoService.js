@@ -31,6 +31,7 @@ const atualizarAluno = async (id_aluno, payload) => {
   try {
     const res = await api.put(`/api/alunos/${Number(id_aluno)}`, payload); 
     return res.data;
+    console.log(res);
   } catch (error) {
     rethrow(error, 'Falha ao atualizar aluno');
   }
