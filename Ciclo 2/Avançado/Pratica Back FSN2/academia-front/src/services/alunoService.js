@@ -20,7 +20,7 @@ const buscarDadosAluno = async (id_aluno) => {
 
 const adicionarAluno = async (payload) => {
   try {
-    const res = await api.post('/alunos', payload);
+    const res = await api.post('api/alunos', payload);
     return res.data;
   } catch (error) {
     rethrow(error, 'Falha ao adicionar aluno');

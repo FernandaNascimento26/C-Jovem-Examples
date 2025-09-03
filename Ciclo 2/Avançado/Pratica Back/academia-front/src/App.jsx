@@ -16,6 +16,7 @@ export default function App(){
           {/* Alunos */}
           <Route path="/alunos" element={<ListAlunos/>} />
           <Route path="/alunos/novo" element={<FormAluno/>} />
+          <Route path="/alunos/:id_aluno" element={<FormAluno/>} />
 
           {/* Treinos */}
           <Route path="/alunos/:alunoId/treinos" element={<ListTreinos/>} />

@@ -3,7 +3,7 @@ const prisma = require('../prisma');
 const getAllAlunos = async() => {
     return prisma.aluno.findMany({
         orderBy: {
-            nome: 'desc'
+            id_aluno: 'desc'
         }
 });
 }

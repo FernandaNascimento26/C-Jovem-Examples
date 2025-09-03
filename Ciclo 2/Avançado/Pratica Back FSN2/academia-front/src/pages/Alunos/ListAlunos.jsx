@@ -40,7 +40,7 @@ export default function ListAlunos(){
   //alteração 6: função para deletar aluno
   async function deleteAluno(id_aluno){
     try{
-    if(!confirm("Confirma a exclusão do aluno?")) return;
+    if(!confirm("Confirma a exclusão do aluno?")) return
        await deletarAluno(id_aluno)
        setAlunos(alunos.filter(a => a.id_aluno !== id_aluno))
   }

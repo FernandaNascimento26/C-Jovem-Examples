@@ -37,8 +37,10 @@ export default function ListAlunos(){
 
 
 //Alteração 6: função para deletar
-async function handleDelete(id_aluno){
-    return await deletarAluno(id_aluno)
+  async function handleDelete(id){
+    if(!confirm('Apagar este aluno?')) return
+    await deletarAluno(id)
+    setAlunos(alunos.filter(a => a.id_aluno !== id))
   }
 
   return (
@@ -76,8 +78,9 @@ async function handleDelete(id_aluno){
                     <td className="text-end">
                       <div className="btn-group">
                         <Link to={`/alunos/${a.id_aluno}/treinos`} className="btn btn-sm btn-outline-secondary">Treinos</Link>
-                        <button className="btn btn-sm btn-outline-primary" disabled>Editar</button>
-                        {/*Alteração 6: chamada da função de deletar*/}
+                        {/*Alteração 6: link para edição*/}
+                        <Link to={`/alunos/${a.id_aluno}`} className="btn btn-sm btn-outline-primary">Editar</Link>
+                        {/*Alteração 7: chamada da função de deletar*/}
                         <button className="btn btn-sm btn-outline-danger" onClick={()=> handleDelete(a.id_aluno)} >Excluir</button>
                       </div>
                     </td>
