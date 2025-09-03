@@ -84,8 +84,8 @@ export default function ListAlunos(){
                     <td className="text-end">
                       <div className="btn-group">
                         <Link to={`/alunos/${a.id_aluno}/treinos`} className="btn btn-sm btn-outline-secondary">Treinos</Link>
-                        <button className="btn btn-sm btn-outline-primary" disabled>Editar</button>
-                        
+                         {/*edição: passando a rota de edição*/}
+                        <Link to={`/alunos/${a.id_aluno}`} className="btn btn-sm btn-outline-primary">Editar</Link>
                         {/*alteração 7: evento para chamar a função de deletar */}
                         <button className="btn btn-sm btn-outline-danger" onClick={() => deleteAluno(a.id_aluno)}>Excluir</button>
                       </div>

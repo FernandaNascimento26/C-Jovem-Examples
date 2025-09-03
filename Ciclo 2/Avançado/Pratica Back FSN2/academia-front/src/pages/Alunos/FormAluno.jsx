@@ -1,5 +1,6 @@
-import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+//Edição: useParams e UseEffect adicionados
+import { useState,useEffect} from 'react'
+import { useNavigate,useParams } from 'react-router-dom'
 
 //ALTERAÇÃO 1: importação do serviço
 import alunoService from '../../services/alunoService' //- exemplo 1
@@ -8,16 +9,53 @@ import alunoService from '../../services/alunoService' //- exemplo 1
 export default function FormAluno(){
   const navigate = useNavigate()
 
-  const [form, setForm] = useState({ nome: '', email: '', data_nas: '' })
+//Edição: obtenção do id da rota e definição da variável editing
+const {id} = useParams()
+const editing = Boolean(id)
+
+const [form, setForm] = useState({ nome: '', email: '', data_nas: '' })
 
   //ALTERAÇÃO 2: estados saving e error
   const [saving, setSaving] = useState(false)
   const [error, setError] = useState(null)
 
+  //Edição: estado loading do aluno quando for edição
+  const [loading, setLoading] = useState(false)
+
   function onChange(e){
     const { name, value } = e.target
     setForm(prev => ({ ...prev, [name]: value }))
   }
+
+  //Edição: useEffect para carregar os dados do aluno quando for edição
+  useEffect(() => {
+    if(!editing) return
+    (async () => {
+      try{
+        setLoading(true)
+        const data = alunoService.buscarDadosAluno(id)
+        console.log(data)
+        setForm({
+          nome: data?.nome || '',
+          email: data?.email || '',
+
+          //formatação da data para o padrão yyyy-MM-dd
+          data_nas: data?.data_nas ? new Date(data.data_nas).toString().slice(0,10) : ''
+         }) 
+         console.log("formulario:",form)
+        
+        }
+      catch(error){
+        const msg = error?.response?.data?.error || 'Falha ao carregar dados do aluno'
+        setError(msg)
+        }
+      finally{
+        setLoading(false)
+      }
+    })()
+  }, [id, editing])
+
+
 
   function onSubmit(e){
     e.preventDefault()
@@ -32,8 +70,6 @@ export default function FormAluno(){
       return setError('Data de nascimento inválida')
     }
 
-    console.log(form)
-
     //ALTERAÇÃO 4: payload no formato esperado pela API
     const payload = {
       nome: form.nome,
@@ -44,16 +80,22 @@ export default function FormAluno(){
     //ALTERAÇÃO 5: chamada do serviço para salvar
     try{
       setSaving(true)
+
+      //edição ou adição
+      if(editing){
+        alunoService.atualizarAluno(id, payload)
+        alert('Aluno atualizado com sucesso!')
+      }
+      else{
       alunoService.adicionarAluno(payload)
-
-      //mensagem de sucesso
       alert('Aluno adicionado com sucesso!')
-
+      }      
       //voltar para a listagem
       navigate(-1)
     }
     catch(error){
-      setError(error.message)
+       const msg = error?.response?.data?.error || 'Falha ao carregar dados do aluno'
+        setError(msg)
     }
     finally{
       setSaving(false)
@@ -63,9 +105,12 @@ export default function FormAluno(){
   return (
     <div className="card shadow-sm">
       <div className="card-body">
-        <h5 className="mb-3">Novo Aluno</h5>
+        {/*Edição: título dinâmico */}
+        <h3>{editing ? `Editar aluno ${form.nome}` : 'Adicionar novo aluno'}</h3>
         {/*ALTERAÇÃO: feedback de erro*/}
         {error && <p className="alert alert-danger">{error}</p>}
+        {/*Edição: feedback de loading */}
+        {loading ? (<p>Carregando dados...</p>):(
         <form onSubmit={onSubmit} className="row g-3">
           <div className="col-md-6">
             <label className="form-label">Nome</label>
@@ -87,6 +132,7 @@ export default function FormAluno(){
             <button type="button" className="btn btn-outline-secondary" onClick={() => navigate(-1)}>Cancelar</button>
           </div>
         </form>
+        )}
       </div>
     </div>
   )
