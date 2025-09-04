@@ -17,7 +17,7 @@ const [form, setForm] = useState({ nome: '', email: '', data_nas: '' })
 
   //ALTERAÇÃO 2: estados saving e error
   const [saving, setSaving] = useState(false)
-  const [error, setError] = useState(null)
+  const [error, setError] = useState('')
 
   //Edição: estado loading do aluno quando for edição
   const [loading, setLoading] = useState(false)
@@ -57,14 +57,14 @@ const [form, setForm] = useState({ nome: '', email: '', data_nas: '' })
 
 
 
-  function onSubmit(e){
+  async function onSubmit(e){
     e.preventDefault()
     setError('')
 
     //ALTERAÇÃO 3: validar campos
     if(!form.email) return setError('Preencha o email')
 
-    if(!form.nome) return setError('Preencha o nome')
+   // if(!form.nome) return setError('Preencha o nome')
 
     if(form.data_nas && !/^\d{4}-\d{2}-\d{2}$/.test(form.data_nas)){
       return setError('Data de nascimento inválida')
@@ -83,11 +83,11 @@ const [form, setForm] = useState({ nome: '', email: '', data_nas: '' })
 
       //edição ou adição
       if(editing){
-        alunoService.atualizarAluno(id, payload)
+        await alunoService.atualizarAluno(id, payload)
         alert('Aluno atualizado com sucesso!')
       }
       else{
-      alunoService.adicionarAluno(payload)
+      await alunoService.adicionarAluno(payload)
       alert('Aluno adicionado com sucesso!')
       }      
       //voltar para a listagem
