@@ -14,21 +14,20 @@ datasource db {
 }
 
 model aluno {
-  id_aluno        Int       @id @default(autoincrement())
+  id_aluno        Int      @id @default(autoincrement())
   nome            String?
-  data_nascimento DateTime
-  email           String    @unique
-
+  data_nascimento DateTime @db.Date        
+  email           String   @unique
   treinos         treino[]
 }
 
 model treino {
   id_treino   Int      @id @default(autoincrement())
   descricao   String
-  data_inicio DateTime @default(now())
+  data_inicio DateTime @default(now()) @db.Timestamptz(6) 
   aluno_id    Int
 
-  aluno aluno @relation(fields: [aluno_id], references: [id_aluno])
+  aluno aluno @relation(fields: [aluno_id], references: [id_aluno], onDelete: Cascade)
 
   @@index([aluno_id])
 }

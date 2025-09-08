@@ -64,7 +64,7 @@ const [form, setForm] = useState({ nome: '', email: '', data_nas: '' })
     //ALTERAÇÃO 3: validar campos
     if(!form.email) return setError('Preencha o email')
 
-   // if(!form.nome) return setError('Preencha o nome')
+   if(!form.nome) return setError('Preencha o nome')
 
     if(form.data_nas && !/^\d{4}-\d{2}-\d{2}$/.test(form.data_nas)){
       return setError('Data de nascimento inválida')
