@@ -13,22 +13,46 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+enum Regra{
+  ALUNO 
+  INSTRUTOR
+  ADMIN
+}
+
+
 model aluno {
   id_aluno Int @id @default(autoincrement())
   nome String
-  data_nas DateTime?
-  email String @unique
+  data_nas DateTime @db.Date
 
+  user   user?
   treinos treino[]
 }
+
+model user {
+  user_id       Int      @id @default(autoincrement())
+  email         String   @unique
+  password_hash String
+  regra          Regra     @default(ALUNO)
+
+  // Se user representar um aluno, aponta para o aluno correspondente
+  aluno_id      Int?     @unique
+  aluno         aluno?   @relation(fields: [aluno_id], references: [id_aluno])
+
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([regra])
+}
+
 
 model treino{
   id_treino Int @id @default(autoincrement())
   descricao String
-  data_inicio DateTime @default(now())
+  data_inicio DateTime @default(now()) @db.Timestamptz(6)
   id_aluno Int
 
-  aluno aluno @relation(fields:[id_aluno],references:[id_aluno])
+  aluno aluno @relation(fields:[id_aluno],references:[id_aluno], onDelete: Cascade)
 
   @@index([id_aluno])
 }
