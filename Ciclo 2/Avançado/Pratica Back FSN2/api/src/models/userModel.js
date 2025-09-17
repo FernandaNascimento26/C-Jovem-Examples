@@ -28,7 +28,7 @@ async function createUser({ email, password_hash, regra = 'ALUNO', aluno_id = nu
     data: {
       email,
       password_hash,
-      role,
+      regra,
       aluno_id, // se for um user aluno, vincule o id do aluno aqui
     },
   });
@@ -51,7 +51,7 @@ async function createAlunoWithUser({ nome, data_nas, email, password_hash }) {
       data: {
         email,
         password_hash,
-        role: 'ALUNO',
+        regra: 'ALUNO',
         aluno_id: a.id_aluno,
       },
     });

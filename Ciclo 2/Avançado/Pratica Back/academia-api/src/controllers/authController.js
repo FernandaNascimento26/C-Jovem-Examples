@@ -1,4 +1,4 @@
-const bcypt = require('bcrypt');
+const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
 // Importa as operações do model de usuário
@@ -42,7 +42,7 @@ async function registerAluno(req, res) {
   // Usa a função do model que já cria ALUNO + USER em transação
   const { a, u } = await createAlunoWithUser({
     nome,
-    data_nascimento, // DATE puro (YYYY-MM-DD) aceito pelo Prisma por causa do @db.Date
+    data_nascimento : new Date(data_nascimento),
     email,
     password_hash,
   });

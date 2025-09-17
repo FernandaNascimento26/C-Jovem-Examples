@@ -10,11 +10,13 @@ const {
   getAlunoTreinosCountHandler, // importa o handler novo
 } = require('../controllers/alunoController');
 
+const{ requireAuth, requireRoles, requireSelfAlunoOrRoles } = require('../middlewares/auth');
+
 // Lista todos
-router.get('/', getAllAlunosHandler);
+router.get('/', requireAuth,getAllAlunosHandler);
 
 // Busca único aluno
-router.get('/:id_aluno', getAlunoByIdHandler);
+router.get('/:id_aluno', requireAuth,getAlunoByIdHandler);
 
 // Preview: quantos treinos o aluno tem
 router.get('/:id_aluno/treinos/count', getAlunoTreinosCountHandler);

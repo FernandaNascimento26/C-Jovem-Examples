@@ -11,12 +11,14 @@ app.use(express.json());
 
 const alunoRoutes = require('./routes/alunoRoutes');
 const treinoRoutes = require('./routes/treinoRoutes');
+const authRoutes = require('./routes/authRoutes');
 
 app.get('/', (req, res) => {
     res.send('API ok!!');
 });
 
 app.use('/api/alunos', alunoRoutes);
-app.use(treinoRoutes);
+app.use('/api',treinoRoutes);
+app.use('/api/auth', authRoutes);
 
 module.exports = app;

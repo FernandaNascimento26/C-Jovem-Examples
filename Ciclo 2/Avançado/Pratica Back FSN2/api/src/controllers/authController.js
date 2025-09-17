@@ -28,7 +28,7 @@ async function registerAluno(req, res) {
   const { nome, data_nas, email, password } = req.body;
 
   // Valida obrigatórios
-  if (!nome || !data_nascimento || !email || !password) {
+  if (!nome || !data_nas || !email || !password) {
     return res.status(400).json({ error: 'Campos obrigatórios faltando.' });
   }
 
@@ -44,7 +44,7 @@ async function registerAluno(req, res) {
   // Usa a função do model que já cria ALUNO + USER em transação
   const { a, u } = await createAlunoWithUser({
     nome,
-    data_nas, // DATE puro (YYYY-MM-DD) aceito pelo Prisma por causa do @db.Date
+    data_nas: new Date(data_nas), // DATE puro (YYYY-MM-DD) aceito pelo Prisma por causa do @db.Date
     email,
     password_hash,
   });
@@ -104,3 +104,4 @@ async function login(req, res) {
   });
 }
 
+module.exports = { login, registerAluno };

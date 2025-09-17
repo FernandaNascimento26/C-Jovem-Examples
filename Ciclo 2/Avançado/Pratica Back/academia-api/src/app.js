@@ -3,6 +3,8 @@ const app = express();
 const cors = require('cors');
 const alunoRoutes = require('./routes/alunoRoutes');
 const treinoRoutes = require('./routes/treinoRoutes');
+const authRoutes = require('./routes/authRoutes');
+
 
 app.use(express.json());
 
@@ -17,6 +19,7 @@ app.get('/', (req, res) => {
 
 app.use('/api/alunos', alunoRoutes);
 app.use('/api',treinoRoutes);
+app.use('/api',authRoutes);
 
 
 

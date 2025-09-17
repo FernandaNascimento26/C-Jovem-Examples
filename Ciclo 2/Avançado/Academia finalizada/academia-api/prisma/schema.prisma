@@ -1,0 +1,51 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  ALUNO
+  PROFESSOR
+  ADMIN
+}
+
+model aluno {
+  id_aluno        Int      @id @default(autoincrement())
+  nome            String?
+  // ALTERADO: email saiu daqui
+  data_nascimento DateTime @db.Date
+  treinos         treino[]
+  // Rel. inversa opcional com User (1:1)
+  user            user?
+}
+
+model user {
+  id            Int      @id @default(autoincrement())
+  email         String   @unique
+  password_hash String
+  role          Role     @default(ALUNO)
+
+  // Se user representar um aluno, aponta para o aluno correspondente
+  aluno_id      Int?     @unique
+  aluno         aluno?   @relation(fields: [aluno_id], references: [id_aluno])
+
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([role])
+}
+
+model treino {
+  id_treino   Int      @id @default(autoincrement())
+  descricao   String
+  data_inicio DateTime @default(now()) @db.Timestamptz(6)
+  aluno_id    Int
+
+  aluno aluno @relation(fields: [aluno_id], references: [id_aluno], onDelete: Cascade)
+
+  @@index([aluno_id])
+}

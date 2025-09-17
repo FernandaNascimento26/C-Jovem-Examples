@@ -51,7 +51,7 @@ async function createAlunoWithUser({ nome, data_nascimento, email, password_hash
       data: {
         email,
         password_hash,
-        role: 'ALUNO',
+        regra: 'ALUNO',
         aluno_id: a.id_aluno,
       },
     });
